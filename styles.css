@@ -69,9 +69,9 @@ h2 {
 
 .input-group label {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 30px;
-    padding: 10px 0;
+    transform: translateY(-50%);
     font-size: 16px;
     color: #666;
     pointer-events: none;
@@ -85,10 +85,8 @@ h2 {
 
 .input-group input:focus ~ label,
 .input-group input:valid ~ label {
-    top: -20px;
-    left: 0;
-    font-size: 12px;
-    color: #4b6cb7;
+    color: rgba(102, 102, 102, 0.3);
+    font-size: 14px;
 }
 
 .input-group input:focus ~ i,
