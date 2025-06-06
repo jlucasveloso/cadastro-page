@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-box login">
+                <h2>Entrar</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="loginEmail" required>
+                        <label for="loginEmail">E-mail</label>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="loginPassword" required>
+                        <label for="loginPassword">Senha</label>
+                    </div>
+                    <button type="submit" class="btn">Entrar</button>
+                </form>
+                <p class="switch-form">Não tem uma conta? <a href="#" id="showRegister">Cadastre-se</a></p>
+            </div>
+
+            <div class="form-box register">
+                <h2>Cadastrar</h2>
+                <form id="registerForm">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="registerName" required>
+                        <label for="registerName">Nome Completo</label>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="registerEmail" required>
+                        <label for="registerEmail">E-mail</label>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="registerPassword" required>
+                        <label for="registerPassword">Senha</label>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" required>
+                        <label for="confirmPassword">Confirmar Senha</label>
+                    </div>
+                    <button type="submit" class="btn">Cadastrar</button>
+                </form>
+                <p class="switch-form">Já tem uma conta? <a href="#" id="showLogin">Entrar</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
