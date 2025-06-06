@@ -52,7 +52,7 @@ h2 {
     transform: translateY(-50%);
     color: #666;
     font-size: 18px;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 .input-group input {
@@ -64,7 +64,7 @@ h2 {
     border-bottom: 2px solid #ddd;
     outline: none;
     background: transparent;
-    transition: 0.3s;
+    transition: border-color 0.3s;
 }
 
 .input-group label {
@@ -75,7 +75,7 @@ h2 {
     font-size: 16px;
     color: #666;
     pointer-events: none;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 .input-group input:focus {
@@ -93,6 +93,7 @@ h2 {
 .input-group input:not(:placeholder-shown) ~ label {
     opacity: 0;
     visibility: hidden;
+    transition: none;
 }
 
 .input-group input:focus ~ i,
