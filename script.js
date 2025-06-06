@@ -21,6 +21,40 @@ document.addEventListener('DOMContentLoaded', () => {
         loginForm.classList.add('active');
     });
 
+    // Função para controlar o comportamento dos labels
+    function handleInputFocus(input) {
+        const label = input.nextElementSibling;
+        if (input.value === '') {
+            label.style.color = 'rgba(102, 102, 102, 0.3)';
+        }
+    }
+
+    function handleInputBlur(input) {
+        const label = input.nextElementSibling;
+        if (input.value === '') {
+            label.style.color = '#666';
+        }
+    }
+
+    function handleInput(input) {
+        const label = input.nextElementSibling;
+        if (input.value !== '') {
+            label.style.opacity = '0';
+            label.style.visibility = 'hidden';
+        } else {
+            label.style.opacity = '1';
+            label.style.visibility = 'visible';
+            label.style.color = '#666';
+        }
+    }
+
+    // Adicionar eventos para todos os inputs
+    document.querySelectorAll('input').forEach(input => {
+        input.addEventListener('focus', () => handleInputFocus(input));
+        input.addEventListener('blur', () => handleInputBlur(input));
+        input.addEventListener('input', () => handleInput(input));
+    });
+
     // Manipular envio do formulário de login
     document.getElementById('loginForm').addEventListener('submit', (e) => {
         e.preventDefault();
