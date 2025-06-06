@@ -39,9 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleInput(input) {
         const label = input.nextElementSibling;
         if (input.value !== '') {
+            label.style.transition = 'none';
             label.style.opacity = '0';
             label.style.visibility = 'hidden';
         } else {
+            label.style.transition = 'color 0.3s';
             label.style.opacity = '1';
             label.style.visibility = 'visible';
             label.style.color = '#666';
@@ -82,4 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
         // Aqui você pode adicionar a lógica de cadastro
         console.log('Cadastro:', { name, email, password });
     });
-}); 
+});
