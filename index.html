@@ -15,12 +15,12 @@
                 <form id="loginForm">
                     <div class="input-group">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="loginEmail" required>
+                        <input type="text" id="loginEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder=" ">
                         <label for="loginEmail">E-mail</label>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-lock"></i>
-                        <input type="password" id="loginPassword" required>
+                        <input type="password" id="loginPassword" required placeholder=" ">
                         <label for="loginPassword">Senha</label>
                     </div>
                     <button type="submit" class="btn">Entrar</button>
@@ -33,22 +33,22 @@
                 <form id="registerForm">
                     <div class="input-group">
                         <i class="fas fa-user"></i>
-                        <input type="text" id="registerName" required>
+                        <input type="text" id="registerName" required placeholder=" ">
                         <label for="registerName">Nome Completo</label>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="registerEmail" required>
+                        <input type="text" id="registerEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder=" ">
                         <label for="registerEmail">E-mail</label>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-lock"></i>
-                        <input type="password" id="registerPassword" required>
+                        <input type="password" id="registerPassword" required placeholder=" ">
                         <label for="registerPassword">Senha</label>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-lock"></i>
-                        <input type="password" id="confirmPassword" required>
+                        <input type="password" id="confirmPassword" required placeholder=" ">
                         <label for="confirmPassword">Confirmar Senha</label>
                     </div>
                     <button type="submit" class="btn">Cadastrar</button>
