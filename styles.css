@@ -78,18 +78,25 @@ h2 {
     transition: 0.3s;
 }
 
-.input-group input:focus,
-.input-group input:valid {
+.input-group input:focus {
     border-bottom-color: #4b6cb7;
 }
 
-.input-group input:focus ~ label,
-.input-group input:valid ~ label {
+.input-group input:not(:placeholder-shown) {
+    border-bottom-color: #4b6cb7;
+}
+
+.input-group input:focus ~ label {
     color: rgba(102, 102, 102, 0.3);
 }
 
+.input-group input:not(:placeholder-shown) ~ label {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .input-group input:focus ~ i,
-.input-group input:valid ~ i {
+.input-group input:not(:placeholder-shown) ~ i {
     color: #4b6cb7;
 }
 
